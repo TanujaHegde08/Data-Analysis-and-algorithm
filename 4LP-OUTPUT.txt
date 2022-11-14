@@ -1,0 +1,12 @@
+Enter the size of the array:
+4
+ENter the array elements:
+8 3 6 9
+Sorted array
+3 
+6 
+8 
+9 
+time elapsed:0.0064milliseconds
+
+Process finished with exit code 0

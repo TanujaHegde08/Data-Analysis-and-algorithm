@@ -1,0 +1,22 @@
+
+PROGRAM-1A
+
+
+
+Move disk 1 from A to C
+Move disk 2 from A to B
+Move disk 1 from C to B
+Move disk 3 from A to C
+Move disk 1 from B to A
+Move disk 2 from B to C
+Move disk 1 from A to C
+
+Process finished with exit code 0
+
+
+
+
+PROGRAM -1B
+Enter num1 and num2
+60 120
+GCD of 60 and 120 is: 60

@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Selectionsort
+{
+ public void sort(int a[]) {
+     int n = a.length;
+     int i;
+     for (i = 0; i <= n - 2; i++) {
+         int min = i;
+         for (int j = i + 1; j <= n - 1; j++)
+         {
+             if (a[j] < a[min])
+                 min = j;}
+             int temp = a[min];
+             a[min] = a[i];
+             a[i] = temp;
+         }
+     }
+
+void printArray(int a[]) {
+    int n = a.length;
+    for (int i = 0; i < n; i++)
+        System.out.println(a[i] + " ");
+    }
+}
+public class Selectionsort1
+{
+    public static void main(String args[])
+    {
+        Selectionsort ob=new Selectionsort();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        System.out.println("ENter the array elements:");
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        long starttime=System.nanoTime();
+        ob.sort(a);
+        long endtime=System.nanoTime();
+        System.out.println("Sorted array");
+        ob.printArray(a);
+        double duration=(endtime-starttime)/1000000.00;
+        System.out.println("time elapsed:"+duration+"milliseconds");
+    }
+
+}

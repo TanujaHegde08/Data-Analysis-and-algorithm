@@ -1,0 +1,50 @@
+
+PROGRAM-1A
+
+
+public class Towerofhanoi {
+    public static void main(String args[])
+    {
+        int disks=3;
+        TOH(disks,'A','B','C');
+    }
+    public static void TOH(int n,char src,char aux,char dest)
+    {
+        if(n==1)
+        {
+            System.out.println("Move disk 1 from "+src+" to "+dest);
+            }
+        else
+        {
+            TOH(n-1,src,dest,aux);
+            System.out.println("Move disk "+n+" from "+src+" to "+dest);
+            TOH(n-1,aux,src,dest);
+        }
+    }
+}
+
+
+
+PROGRAM-1B
+import java.util.Scanner;
+
+public class GCD
+{
+    public static int gcd(int num1, int num2)
+    {
+        if (num2 == 0)
+        {
+            return num1;
+        }
+        return gcd(num2, num1 % num2);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter num1 and num2");
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        int result=gcd(num1,num2);
+        System.out.println("GCD of "+num1+" and "+num2+" is: "+result);
+    }
+}

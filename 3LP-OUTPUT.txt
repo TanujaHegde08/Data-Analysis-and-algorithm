@@ -1,0 +1,43 @@
+USN:1MJ19CS175 NAME:TANUJA HEGDE
+Enter the size of the array:
+5
+1.Linear search
+2.Binary search
+3.Exit
+Enter your option:
+1
+Enter the array elements:
+34 57 36 46 89
+Enter the element to be searched:
+89
+The element is at the position	5
+Time taken for sorrtting the elements is0.108milli seconds
+1.Linear search
+2.Binary search
+3.Exit
+Enter your option:
+2
+Enter the array element in acending order:
+3 5 7 46 58
+Enter the element to be searched:
+46
+The element is at the position	4
+Time taken for sorrtting the elements is0.274milli seconds
+1.Linear search
+2.Binary search
+3.Exit
+Enter your option:
+2
+Enter the array element in acending order:
+23 47 56 37 49
+Enter the element to be searched:
+57
+The element is not present
+Time taken for sorrtting the elements is0.034milli seconds
+1.Linear search
+2.Binary search
+3.Exit
+Enter your option:
+3
+
+Process finished with exit code 0

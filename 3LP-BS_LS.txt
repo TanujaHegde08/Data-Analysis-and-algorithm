@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+class Binarysearch1
+{
+    int linearsearch(int a[],int key,int n)
+    {
+        for(int i=0;i<=n;i++)
+        {
+            if(a[i]==key)
+                return i;
+        }
+        return 0;
+    }
+    int binarysearch(int a[],int low,int high,int key)
+    {
+        if(low==high)
+        {
+            if(a[low]==key)
+                return low;
+            else
+                return 0;
+        }
+        else
+        {
+            int mid=(low+high)/2;
+            if(key==a[mid])
+                return mid;
+            else if(key<a[mid])
+                return binarysearch(a,low,mid-1,key);
+            else
+                return binarysearch(a,mid+1,high,key);
+        }
+    }
+}
+public class BS_LS
+{
+    public static void main(String args[])
+    {
+        System.out.println("USN:1MJ19CS175 NAME:TANUJA HEGDE");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        int n=sc.nextInt();
+        int a[]=new int[n+1];
+        Boolean exit=false;
+
+        do {
+
+            System.out.println("1.Linear search\n2.Binary search\n3.Exit");
+            System.out.println("Enter your option:");
+                int option = sc.nextInt();
+                Binarysearch1 bs1 = new Binarysearch1();
+                switch (option)
+                {
+                    case 1:
+                         System.out.println("Enter the array elements:");
+                        for (int i = 1; i <= n; i++)
+                        {
+                            a[i] = sc.nextInt();
+                        }
+                        System.out.println("Enter the element to be searched:");
+                        int x = sc.nextInt();
+                        long starttime = System.nanoTime();
+                        int position = bs1.linearsearch(a, x, n);
+                        long endTime = System.nanoTime();
+                        double duration = (endTime - starttime) / 100000.00;
+                        if (position == 0)
+                            System.out.println("The element is not present");
+                        else
+                            {
+                            System.out.println("The element is at the position\t" + position);
+                            System.out.println("Time taken for sorrtting the elements is" + duration + "milli seconds");
+                            break;
+                        }
+                    case 2:
+                    {
+                        System.out.println("Enter the array element in acending order:");
+                        for (int i=1; i<=n; i++) {
+                            a[i] = sc.nextInt();
+                        }
+                        System.out.println("Enter the element to be searched:");
+                        int x1= sc.nextInt();
+                       long starttime1 = System.nanoTime();
+                      int position1 = bs1.binarysearch(a,1,n,x1);
+                        long endTime1 = System.nanoTime();
+                        double duration1 = (endTime1- starttime1) / 100000.00;
+                        if (position1== 0)
+                            System.out.println("The element is not present");
+                        else
+
+                            System.out.println("The element is at the position\t" + position1);
+                            System.out.println("Time taken for sorrtting the elements is" + duration1 + "milli seconds");
+                         //   break;
+                        }
+                    break;
+
+                        case 3:
+                            exit=true;
+                            break;
+                        default:
+                            System.out.println("Invalid choice");
+                            break;
+                    }
+                }
+                while (exit == false) ;
+            }
+        }

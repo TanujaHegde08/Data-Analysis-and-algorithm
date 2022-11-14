@@ -1,0 +1,49 @@
+USN:1MJ19CS175 NAME:TANUJA HEGDE
+Enter stack size:
+2
+Enter your choice:
+1.push
+2.pop
+3.display
+4.exit
+
+1
+Enter the element to be inserted:
+30
+Pushed item:30
+Enter your choice:
+1.push
+2.pop
+3.display
+4.exit
+
+1
+Enter the element to be inserted:
+40
+Pushed item:40
+Enter your choice:
+1.push
+2.pop
+3.display
+4.exit
+
+1
+Enter the element to be inserted:
+50
+Stack overflow
+Enter your choice:
+1.push
+2.pop
+3.display
+4.exit
+
+3
+Stack elements are:
+40
+30
+Enter your choice:
+1.push
+2.pop
+3.display
+4.exit
+

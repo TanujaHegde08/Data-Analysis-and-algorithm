@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<time.h>
+#include<conio.h>
+int a[10],n;
+void SelectionSort()
+{
+    int i,j,temp;
+    for(i=0; i<=n-2; i++)
+    {
+        int min = i;
+        for (j=i+1; j<=n-1; j++)
+        	if (a[j] < a[min])
+                min = j;
+        temp = a[i];
+        a[i] = a[min];
+        a[min] = temp;
+    }
+}
+int main()
+{
+	int k;
+	clock_t starttime,endtime;
+    printf("\tName:TANUJA HEGDE \t USN:1MJ19CS175\n\n");
+    printf("Enter the array size: ");
+    scanf("%d",&n);
+    printf("Enter the array elements: ");
+    for(int i=0; i<n; i++)
+    scanf("%d",&a[i]);
+    starttime = clock();
+    SelectionSort();
+    endtime = clock();
+    double timetaken = ((double)(endtime-starttime)/CLOCKS_PER_SEC)*1000;
+    printf("The sorted array is: ");
+    for(k=0; k<n; k++)
+    printf("%d ",a[k]);
+    printf("\n");
+    printf("Time taken for execution: %lf milliseconds", timetaken);
+    getch();
+}
